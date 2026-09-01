@@ -1,8 +1,10 @@
 # Previewing and publishing
 
-Both pages are static HTML — there's no build step, no server-side code, and no
-dependencies to install. "Deploying" this project just means putting the two files
-somewhere that can serve them over the web.
+Both pages are static HTML — there's no build step, no server-side code, and nothing to
+install. "Deploying" this project just means putting the two files somewhere that can
+serve them over the web. (Both pages do load their fonts from Google Fonts over the
+network; with no internet connection they'll just fall back to a plain system font,
+nothing will break.)
 
 ## Previewing on your own computer
 
@@ -20,8 +22,9 @@ file:
 python3 -m http.server 8000
 ```
 
-...then visit `http://localhost:8000/index.html`. Any other local server works too
-(e.g. the VS Code "Live Server" extension, or `npx serve`).
+...then visit `http://localhost:8000/index.html`. (On Windows, this is usually just
+`python` instead of `python3`.) Any other local server works too — e.g. the VS Code
+"Live Server" extension, or `npx serve`.
 
 ## Publishing for free
 
@@ -35,8 +38,10 @@ comfortable with — there's no functional difference between them for this proj
 2. In the repository's **Settings → Pages**, set the source to that branch and the
    root folder.
 3. GitHub will publish your Gallery at `https://<your-username>.github.io/<repo-name>/`
-   and your Studio at the same address with `/studio.html` appended. Both are served
-   over HTTPS automatically, so the camera preview will work.
+   and your Studio at the same address with `/studio.html` appended (if your repository
+   is itself named `<your-username>.github.io`, it publishes at that address directly,
+   with no `<repo-name>` in the path). Both are served over HTTPS automatically, so the
+   camera preview will work.
 
 ### Netlify or Vercel
 

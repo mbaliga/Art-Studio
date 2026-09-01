@@ -32,13 +32,19 @@ Hyderabad. Search for these exact snippets and replace them with your own detail
 |---|---|---|
 | `<title>Sadhna Studio</title>` | Browser tab title | "Your Name Studio" |
 | `<div class="brand">Sadhna<em>'s</em> art</div>` | Sign-in screen logo | Your name |
-| `sadhna@sadhnasart.com` | Pre-filled sign-in email (appears twice) | Your email |
+| `sadhna@sadhnasart.com` in the `who` input's `value` | Pre-filled sign-in email | Your email |
+| `sadhna@sadhnasart.com` inside `const MEMBERS=[` | The owner's email, shown in the Team/People list | Your email |
 | `<b>Only Sadhna can get in here.</b>` | Sign-in fine print | Your name |
 | `<div class="mark">Sadhna<em>'s</em> art<span>Studio</span></div>` | Sidebar logo | Your name |
 | `<b>Sadhna</b>` next to "Signed in on this device" | Session label | Your name |
-| `Connect @sadhnas.art` / `Connected as @sadhnas.art` | A decorative "connect your domain" button — cosmetic only, doesn't actually connect anything | Your handle, or remove the button |
+| `Connect @sadhnas.art` / `Connected as @sadhnas.art` | A decorative **Instagram**-connect button in the "Studio" tab — cosmetic only, doesn't actually connect to Instagram or anywhere else | Your Instagram handle, or remove the button |
 | `published to sadhnasart.com` | Toast message shown after "publishing" changes | Your domain |
 | `studio:["Studio","sadhnasart.com"]` | Page subtitle shown in the Studio header | Your domain |
+
+Note there are two different sample handles in here: `sadhnasart.com` is the studio's
+*website* domain (used in the header subtitle and the "published to..." toast), while
+`@sadhnas.art` is a separate sample *Instagram* handle used only by the decorative
+connect button above. Update each to match where it actually appears.
 
 ## 2. Your artworks
 
@@ -123,9 +129,11 @@ prices, publish, see buyer contact details, manage coupons, manage people). Add 
 member by copying an entry and giving them a role; adjust what a role can do by editing
 `ROLE_PRESETS`.
 
-**Sign-in here is a simulation, not real security.** Clicking either sign-in button
-("passkey" or "email link") logs you in immediately — there's no password, no real
-passkey, and no email actually sent. The page does carry
+**Sign-in here is a simulation, not real security.** Clicking "Sign in with a passkey"
+logs you in right away; "Email me a sign-in link" shows a "link sent" message and then
+does the same thing after a couple of seconds, to mimic what checking your inbox would
+feel like. Either way, nothing is verified — there's no password, no real passkey, and
+no email actually sent. The page does carry
 `<meta name="robots" content="noindex, nofollow">` so search engines won't list it, but
 that only keeps it out of search results — it doesn't stop anyone with the link from
 opening it. Don't put real buyer contact details or unlisted pricing here until you've

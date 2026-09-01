@@ -16,8 +16,9 @@ embedded inline. There is nothing to install and nothing to build: open the file
 host it anywhere that serves static files.
 
 **Important:** the Studio page is a *prototype of the experience*, not a working backend.
-Sign-in is simulated (any click "signs you in"), and all of its data — team members,
-prices, coupons, enquiries — resets to sample data on every page reload. Likewise, the
+Sign-in is simulated (clicking either sign-in button just "signs you in," with nothing
+real to check), and all of its data — team members, prices, coupons, enquiries — resets
+to sample data on every page reload. Likewise, the
 Gallery's commission and wishlist forms validate input and show a confirmation, but they
 don't actually send anything anywhere yet. See [`guides/CUSTOMIZING.md`](./guides/CUSTOMIZING.md)
 for what to wire up before you rely on either page for real business.
